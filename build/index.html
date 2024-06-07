@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body
+    class="bg-off-white min-h-[100vh] flex justify-center items-center py-20"
+  >
+    <main
+      class="bg-white p-6 lg:p-14 rounded-t-xl rounded-bl-xl rounded-br-[80px] w-[345px] grid gap-16 lg:w-[840px]"
+    >
+      <!-- inputs section -->
+      <form class="grid grid-cols-3 gap-4 xl:flex xl:gap-8" action="#">
+        <div class="font-extrabold">
+          <label for="day" class="text-sm text-smokey-grey"> DAY </label>
+          <input
+            type="text"
+            placeholder="DD"
+            class="block w-full text-xl 2xl:text-5xl text-off-black p-4 border-2 focus:outline-purple border-light-grey rounded-2xl lg:w-[160px] cursor-pointer"
+            id="day"
+          />
+          <p
+            class="font-bold text-sm text-light-red mt-3 hidden"
+            id="error-message-1"
+          ></p>
+        </div>
+        <div class="font-extrabold">
+          <label for="month" class="text-sm text-smokey-grey"> MONTH </label>
+          <input
+            type="text"
+            placeholder="MM"
+            class="block w-full text-xl 2xl:text-5xl text-off-black p-4 border-2 focus:outline-purple cursor-pointer border-light-grey rounded-2xl lg:w-[160px]"
+            id="month"
+          />
+          <p
+            class="font-bold text-sm text-light-red mt-3 hidden"
+            id="error-message-2"
+          >
+            This field <br class="xl:hidden" />
+            is required
+          </p>
+        </div>
+        <div class="font-extrabold">
+          <label for="year" class="text-sm 2xl:text-2xl text-smokey-grey">
+            YEAR
+          </label>
+          <input
+            type="text"
+            placeholder="YYYY"
+            class="block w-full text-xl 2xl:text-5xl text-off-black p-4 border-2 focus:outline-purple cursor-pointer border-light-grey rounded-2xl lg:w-[160px]"
+            id="year"
+          />
+          <p
+            class="font-bold text-sm text-light-red mt-3 hidden"
+            id="error-message-3"
+          >
+            This field <br class="xl:hidden" />
+            is required
+          </p>
+        </div>
+      </form>
+
+      <!-- separator and submit -->
+      <div class="relative">
+        <hr class="bg-smokey-grey" />
+        <button
+          type="submit"
+          class="w-[65px] h-[65px] lg:w-[95px] lg:h-[95px] translate-y-[-50%] left-[40%] lg:left-0 lg:ml-[90%] bg-purple hover:bg-black absolute flex justify-center items-center rounded-[50%] p-5"
+          title="Submit button"
+          id="submit-button"
+        >
+          <img src="images/icon-arrow.svg" alt="arrow icon" />
+        </button>
+      </div>
+
+      <!-- output -->
+      <section>
+        <div class="text-5xl xl:text-[84px] font-bold xl:font-extrabold italic">
+          <span class="text-purple" id="years-display">--</span> years
+        </div>
+        <div class="text-5xl xl:text-[84px] font-bold xl:font-extrabold italic">
+          <span class="text-purple" id="months-display">--</span> months
+        </div>
+        <div class="text-5xl xl:text-[84px] font-bold xl:font-extrabold italic">
+          <span class="text-purple" id="days-display">--</span> days
+        </div>
+      </section>
+    </main>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>
